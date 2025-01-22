@@ -1,0 +1,13 @@
+webform:
+    label: WebForm
+    indexFields: [subject, message]
+    fields:
+        - element: input
+          fieldType: text
+          name: subject
+          label: Subject
+          required: true
+        - element: textarea
+          name: message
+          label: Message
+          required: true

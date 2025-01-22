@@ -1,0 +1,7 @@
+brand: 
+  $ref: './brand.yaml'
+schemas:
+  contacts:
+    $ref: './contacts.yaml'
+  interactions: 
+    $ref: './interactions.yaml'

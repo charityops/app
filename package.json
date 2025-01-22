@@ -4,9 +4,16 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "npm run build --ws",
+    "deploy": "sst deploy",
+    "dev": "sst dev",
+    "dev:site": "cd packages/frontend && npm run dev",
+    "lint": "npm run lint --ws"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22",
+    "dotenv": "^16.4.7",
     "typescript": "^5"
   },
   "dependencies": {

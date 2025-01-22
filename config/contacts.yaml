@@ -1,0 +1,125 @@
+volunteer:
+    label: Volunteer
+    nameSource: [first_name, last_name]
+    indexFields: [first_name, last_name, email, address_1, phone]
+    fields:
+        - element: columns
+          fields:
+          - element: input
+            fieldType: text
+            name: first_name
+            label: First Name
+            required: true
+          - element: input
+            fieldType: text
+            name: last_name
+            label: Last Name
+            required: true
+        - element: input
+          fieldType: email
+          name: email
+          label: Email
+          required: false
+        - element: input
+          name: phone
+          fieldType: tel
+          label: Phone
+          required: false
+        - element: input
+          fieldType: text
+          label: Street Address
+          name: address_1
+          required: false
+        - element: input
+          name: address_2
+          fieldType: text
+          label: Street Address 2
+          required: false
+        - element: columns
+          fields:
+          - element: input
+            name: address_city
+            fieldType: text
+            label: City
+            required: false
+          - element: select
+            name: address_state
+            label: State
+            required: false
+            options:
+              $ref: ./states.yaml
+          - element: input
+            name: address_zip
+            fieldType: text
+            label: Zip
+            required: false
+client:
+    label: Client
+    nameSource: [first_name, last_name]
+    indexFields: [first_name, last_name, email, address_1, phone, notes]
+    fields:
+        - element: fieldset
+          label: Contact Information
+          fields:
+              - element: columns
+                fields:
+                - element: input
+                  fieldType: text
+                  name: first_name
+                  label: First Name
+                  required: true
+                - element: input
+                  fieldType: text
+                  name: last_name
+                  label: Last Name
+                  required: true
+              - element: input
+                fieldType: email
+                name: email
+                label: Email
+                required: false
+              - element: input
+                name: phone
+                fieldType: tel
+                label: Phone
+                required: false
+              - element: input
+                fieldType: text
+                label: Street Address
+                name: address_1
+                required: false
+              - element: input
+                name: address_2
+                fieldType: text
+                label: Street Address 2
+                required: false
+              - element: columns
+                fields:
+                - element: input
+                  name: address_city
+                  fieldType: text
+                  label: City
+                  required: false
+                - element: select
+                  name: address_state
+                  label: State
+                  required: false
+                  options:
+                      $ref: ./states.yaml
+                - element: input
+                  name: address_zip
+                  fieldType: text
+                  label: Zip
+                  required: false
+        - element: fieldset
+          label: Support Information
+          fields:
+              - element: input
+                name: last_visit
+                fieldType: date
+                label: Last Visit
+                required: false
+              - element: textarea
+                name: notes
+                label: Notes
+                required: false
