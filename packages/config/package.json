@@ -6,6 +6,7 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
+        "clean": "rm -rf dist",
         "test": "npm run typecheck",
         "build": "npm run build:type && npm run build:config",
         "build:config": "node ./scripts/process_config.mjs ../../config/main.yaml",
